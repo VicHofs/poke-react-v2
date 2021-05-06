@@ -22,6 +22,7 @@
   "rules": {
     "no-unused-vars": "warn",
     "prefer-template": "warn",
+    "indent": "warn",
     "react/jsx-curly-newline": "warn",
     "object-curly-newline": "warn",
     "implicit-arrow-linebreak": "warn",

@@ -4,12 +4,30 @@ import Header from 'components/Header'; /*
 import CardDefaultProps from 'mock/card'; */
 import SearchBar from 'components/SearchBar';
 import spinner from 'static/images/loader.png';
-import { LoaderContainer, NoResultCard } from './Styles';
+import { ThemeProvider } from 'styled-components';
+import darkTheme from 'styles/themes/dark';
+import defaultTheme from 'styles/themes/default';
+import darkmodeIcon from 'static/images/darkmodeIcon.png';
+import defaultmodeIcon from 'static/images/defaultmodeIcon.png';
+import GlobalStyles from './styles/global';
+import { LoaderContainer, ThemeContainer } from './Styles';
+
+interface Theme {
+  title: string;
+  colors: {
+    bg: string;
+    text: string;
+    lightContrast: string;
+    details: string;
+    vibrant: string;
+  };
+}
 
 const App: React.FC = () => {
   const [data, setData] = useState<CardProps>();
   const [typedSearch, setTypedSearch] = useState('');
   const [loading, setLoading] = useState(false);
+  const [theme, setTheme] = useState<Theme>(defaultTheme);
   const handleData = (pokemonData: CardProps, word: string) => {
     setData(pokemonData);
     setTypedSearch(word);
@@ -28,7 +46,8 @@ const App: React.FC = () => {
   };
   useEffect(() => console.log('saved cards: ', saved), [saved]);
   return (
-    <div>
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
       <Header />
       <div
         style={{
@@ -38,12 +57,40 @@ const App: React.FC = () => {
           placeItems: 'center',
         }}
       >
-        <SearchBar
-          onChange={(pokemonData: CardProps, word: string) => {
-            return handleData(pokemonData, word);
-          }}
-          isFetching={(isFetching: boolean) => setLoading(isFetching)}
-        />
+        <div style={{ display: 'flex', maxWidth: '90vw' }}>
+          <SearchBar
+            onChange={(pokemonData: CardProps, word: string) => {
+              return handleData(pokemonData, word);
+            }}
+            isFetching={(isFetching: boolean) => setLoading(isFetching)}
+          />
+          <ThemeContainer
+            onClick={() => {
+              if (theme.title === 'default') setTheme(darkTheme);
+              else setTheme(defaultTheme);
+            }}
+          >
+            {theme.title === 'dark' ? (
+              <>
+                <img
+                  className="default"
+                  src={defaultmodeIcon}
+                  alt="default theme selector"
+                />
+                {/* <p>Go Default Theme?</p> */}
+              </>
+            ) : (
+              <>
+                <img
+                  className="dark"
+                  src={darkmodeIcon}
+                  alt="dark theme selector"
+                />
+                {/* <p style={{ marginTop: '10px' }}>Go Dark Theme?</p> */}
+              </>
+            )}
+          </ThemeContainer>
+        </div>
 
         {typedSearch !== '' &&
           !loading &&
@@ -58,6 +105,7 @@ const App: React.FC = () => {
             />
             // eslint-disable-next-line indent
           )}
+
         {typedSearch !== '' && loading && (
           <LoaderContainer>
             <img className="spinner" src={spinner} alt="loading..." />
@@ -83,7 +131,7 @@ const App: React.FC = () => {
           />
         ))}
       </div>
-    </div>
+    </ThemeProvider>
   );
 };
 

@@ -57,6 +57,7 @@ export const Container = styled.span<ContainerProps>`
     left: 50%;
     transform: translate(-50%, -50%);
     animation: ${bounceInBottom} 300ms cubic-bezier(0.16, 0.79, 0.58, 0.97);
+    z-index: 10;
 
     content: '${({ typeName }) => `${typeName}`}';
     display: flex;

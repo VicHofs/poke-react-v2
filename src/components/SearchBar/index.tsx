@@ -14,8 +14,16 @@ interface Props {
 const SearchBar: React.FC<Props> = ({ onChange, isFetching }: Props) => {
   const [typedSearch, setTypedSearch] = useState('');
   const [data, setData] = useState<CardProps>();
-
+  const [greeting, setGreeting] = useState(true);
   let debounceTime: any;
+
+  const greetings = [
+    'Pika?',
+    'PikaPika?',
+    'Looking for...',
+    'Type your search here...',
+    'I choose...',
+  ];
 
   const debounceTyping = (typedWord: string) => {
     clearTimeout(debounceTime);
@@ -36,6 +44,7 @@ const SearchBar: React.FC<Props> = ({ onChange, isFetching }: Props) => {
           sprite: '',
           flavorData: [],
         });
+        setGreeting(false);
         try {
           await api
             .get<IPokemon>(`/pokemon/${typedSearch.toLowerCase()}`)
@@ -66,9 +75,14 @@ const SearchBar: React.FC<Props> = ({ onChange, isFetching }: Props) => {
     <Container>
       <div style={{ height: '100%', width: '100%', display: 'flex' }}>
         <input
+          id="searchBox"
           className="searchBox"
           type="text"
-          placeholder="Got a favorite Pokémon?"
+          placeholder={
+            greeting
+              ? greetings[Math.floor(Math.random() * greetings.length)]
+              : ''
+          }
           onChange={e => debounceTyping(e.target.value)}
         />
         <AiOutlineSearch className="searchIcon" />

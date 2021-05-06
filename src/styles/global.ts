@@ -42,6 +42,11 @@ const GlobalStyles = createGlobalStyle`
     font-weight: 400;
     font-size: 2.2rem;
     color: ${({ theme }) => theme.colors.text};
+    overflow-x: hidden;]
+
+    input, textarea, select {
+      -webkit-appearance: none;
+    }
   }
 
   p.noResult {

@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  margin-top: 6vh;
   border: 2px solid ${({ theme }) => theme.colors.details}60;
   border-radius: 50px;
   height: 50px;
   width: 400px;
+  max-width: 70vw;
   padding: 2px;
   display: flex;
   align-items: center;

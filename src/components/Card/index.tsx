@@ -69,7 +69,18 @@ const Card: React.FC<CardProps> = ({
     <Container>
       <SpriteContainer>
         <img src={sprite} alt={`${name}'s sprite`} className="sprite" />
-        <p>{`#${number}`}</p>
+        <p className="number">{`#${number}`}</p>
+        <p className="mobileDescription">
+          {declutter(
+            `${
+              flavorData.find(
+                entry =>
+                  entry.language.name === flavorVersion.lang &&
+                  entry.version.name === flavorVersion.ver,
+              )?.flavor_text
+            }`,
+          )}
+        </p>
       </SpriteContainer>
       <PokeData>
         <h1>
