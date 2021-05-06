@@ -90,6 +90,6 @@ Made with ❤ by Victor Hofstetter and Hugo Almeida at Hicom IT Brazil.
 [express]: https://expressjs.com/
 [insomnia]: https://insomnia.rest
 [docker]: https://www.docker.com/
-[website]: https://vichofs.github.io/poke-react/
+[website]: https://vichofs.github.io/poke-react-v2/
 [webpack]: https://webpack.js.org/
 [babel]: https://babeljs.io/
