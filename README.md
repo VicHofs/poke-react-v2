@@ -5,7 +5,7 @@
 </div>
 <p align="center">
   <a href="https://www.linkedin.com/in/victor-hofstetter/">
-    <img alt="Made by VicHofs" src="https://img.shields.io/badge/made%20by-VicHofs | hv90 | sapucaialuann-%2304D361">
+    <img alt="Made by VicHofs and hv90" src="https://img.shields.io/badge/made%20by-VicHofs | hv90-%2304D361">
   </a>
 
   <a href="https://github.com/VicHofs/poke-react/commits/master">
