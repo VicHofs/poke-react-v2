@@ -9,7 +9,7 @@
   </a>
 
   <a href="https://github.com/VicHofs/poke-react/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/VicHofs/poke-react">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/VicHofs/poke-react-v2">
   </a>
 
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
