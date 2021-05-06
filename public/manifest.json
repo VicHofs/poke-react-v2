@@ -1,6 +1,6 @@
 {
-  "short_name": "Poké React",
-  "name": "A Pokédex React app",
+  "short_name": "PokéReact",
+  "name": "Poké React",
   "icons": [
     {
       "src": "favicon.ico",
