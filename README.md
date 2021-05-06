@@ -1,4 +1,4 @@
-# Poké React
+# Poké React v2
 
 <div display="flex" align="center">
 	<img src="https://github.com/VicHofs/poke-react/blob/master/gh-assets/overview.gif" />
