@@ -21,7 +21,7 @@ export const Container = styled.div`
 
   border-radius: 20px;
   background-color: ${({ theme }) => theme.colors.bg};
-  border: 2px solid ${({ theme }) => theme.colors.lightContrast};
+  border: 2px solid ${({ theme }) => theme.colors.lightContrast}30;
   box-shadow: 0px 8px 10px rgba(29, 29, 29, 0.699);
   max-width: 50vw;
   min-height: 150px;
