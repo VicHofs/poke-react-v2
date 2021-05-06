@@ -49,7 +49,7 @@ A PokéDex-like React app
 
 _All data is pulled from the PokéApi API._
 
-Use the search bar to look up a Pokémon—as of right now, searches need to match the Pokémon's name perfectly—and get its sprite, PokéDex ID and description.
+Use the search bar to look up a Pokémon—as of right now, searches need to match the Pokémon's name perfectly—and get its sprite, PokéDex ID, type(s) and description.
 
 There is support for multiple languages—spanning across different games—pertaining to descriptions.
 
