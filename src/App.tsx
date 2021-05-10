@@ -9,6 +9,7 @@ import darkTheme from 'styles/themes/dark';
 import defaultTheme from 'styles/themes/default';
 import darkmodeIcon from 'static/images/darkmodeIcon.png';
 import defaultmodeIcon from 'static/images/defaultmodeIcon.png';
+import Footer from 'components/Footer';
 import GlobalStyles from './styles/global';
 import { LoaderContainer, ThemeContainer } from './Styles';
 
@@ -55,8 +56,9 @@ const App: React.FC = () => {
         style={{
           display: 'flex',
           flexDirection: 'column',
-          placeContent: 'center',
+          alignContent: 'center',
           placeItems: 'center',
+          minHeight: 'calc(100vh - 120px)',
         }}
       >
         <div style={{ display: 'flex', maxWidth: '90vw' }}>
@@ -133,6 +135,7 @@ const App: React.FC = () => {
           />
         ))}
       </div>
+      <Footer />
     </ThemeProvider>
   );
 };
