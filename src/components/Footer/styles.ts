@@ -15,6 +15,49 @@ export const Container = styled.div`
     z-index: 10;
   }
 
+  a {
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+    transition: all 300ms cubic-bezier(0.16, 0.79, 0.58, 0.97);
+  }
+
+  a:before {
+    content: '「';
+    position: absolute;
+    left: 0;
+    transform: translate(-90%, -10px) scaleX(0.8);
+    visibility: hidden;
+    transition: all 300ms cubic-bezier(0.16, 0.79, 0.58, 0.97);
+    opacity: 0;
+  }
+
+  a:after {
+    content: '」';
+    position: absolute;
+    right: 0;
+    transform: translate(82%, 13px) scaleX(0.8);
+    visibility: hidden;
+    transition: all 300ms cubic-bezier(0.16, 0.79, 0.58, 0.97);
+    opacity: 0;
+  }
+
+  a:hover {
+    margin: 0 10px;
+  }
+
+  a:hover:before {
+    visibility: visible;
+    transform: translate(-90%, 0) scale(0.8, 0.6);
+    opacity: 1;
+  }
+
+  a:hover:after {
+    visibility: visible;
+    transform: translate(82%, 3px) scale(0.8, 0.6);
+    opacity: 1;
+  }
+
   img {
     user-select: none;
     -webkit-user-drag: none;
