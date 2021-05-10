@@ -13,6 +13,7 @@ interface Props {
 
 const SearchBar: React.FC<Props> = ({ onChange, isFetching }: Props) => {
   const [typedSearch, setTypedSearch] = useState('');
+  const [lastTypedSearch, setLastTypedSearch] = useState('');
   const [data, setData] = useState<CardProps>();
   const [greeting, setGreeting] = useState(true);
   let debounceTime: any;
@@ -27,10 +28,8 @@ const SearchBar: React.FC<Props> = ({ onChange, isFetching }: Props) => {
 
   const debounceTyping = (typedWord: string) => {
     clearTimeout(debounceTime);
-    isFetching(true);
     debounceTime = setTimeout(() => {
       setTypedSearch(typedWord);
-      isFetching(false);
     }, 1000);
   };
 
@@ -46,6 +45,7 @@ const SearchBar: React.FC<Props> = ({ onChange, isFetching }: Props) => {
         });
         setGreeting(false);
         try {
+          isFetching(true);
           await api
             .get<IPokemon>(`/pokemon/${typedSearch.toLowerCase()}`)
             .then(async res => {
@@ -60,12 +60,13 @@ const SearchBar: React.FC<Props> = ({ onChange, isFetching }: Props) => {
                       sprite: res.data.sprites.front_default,
                       flavorData: result.data.flavor_text_entries,
                     });
+                    isFetching(false);
                   });
               }
             });
-          isFetching(false);
         } catch (e) {
           console.error(e);
+          isFetching(false);
         }
       }
     };
