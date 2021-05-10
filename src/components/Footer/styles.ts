@@ -15,6 +15,11 @@ export const Container = styled.div`
     z-index: 10;
   }
 
+  img {
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+
   img.bg {
     position: absolute;
     height: 120px;

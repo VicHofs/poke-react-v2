@@ -10,6 +10,7 @@ import defaultTheme from 'styles/themes/default';
 import darkmodeIcon from 'static/images/darkmodeIcon.png';
 import defaultmodeIcon from 'static/images/defaultmodeIcon.png';
 import Footer from 'components/Footer';
+import { getCookies, setCookie } from 'helpers/cookies';
 import GlobalStyles from './styles/global';
 import { LoaderContainer, ThemeContainer } from './Styles';
 
@@ -28,7 +29,9 @@ const App: React.FC = () => {
   const [data, setData] = useState<CardProps>();
   const [typedSearch, setTypedSearch] = useState('');
   const [loading, setLoading] = useState(false);
-  const [theme, setTheme] = useState<Theme>(defaultTheme);
+  const [theme, setTheme] = useState<Theme>(
+    getCookies().theme === 'dark' ? darkTheme : defaultTheme,
+  );
 
   const handleData = (pokemonData: CardProps, word: string) => {
     setData(pokemonData);
@@ -70,8 +73,13 @@ const App: React.FC = () => {
           />
           <ThemeContainer
             onClick={() => {
-              if (theme.title === 'default') setTheme(darkTheme);
-              else setTheme(defaultTheme);
+              if (theme.title === 'default') {
+                setTheme(darkTheme);
+                setCookie('theme', 'dark');
+              } else {
+                setTheme(defaultTheme);
+                setCookie('theme', 'light');
+              }
             }}
           >
             {theme.title === 'dark' ? (
