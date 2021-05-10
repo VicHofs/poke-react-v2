@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Card, { CardProps } from 'components/Card';
 import Header from 'components/Header'; /*
 import CardDefaultProps from 'mock/card'; */
+import jwt from 'jwt-simple';
 import SearchBar from 'components/SearchBar';
 import spinner from 'static/images/loader.png';
 import { ThemeProvider } from 'styled-components';
@@ -36,6 +37,19 @@ const App: React.FC = () => {
   useEffect(() => {
     // do nothing
   }, [typedSearch]);
+
+  useEffect(() => {
+    const handleCache = () => {
+      if (document.getElementById('root')?.innerHTML != null) {
+        localStorage.setItem(
+          `@lastKnown_${window.location.href}`,
+          jwt.encode(document.getElementById('root')?.innerHTML, '123456'),
+        );
+      }
+    };
+    window.addEventListener('load', handleCache);
+    return () => window.removeEventListener('load', handleCache);
+  }, []);
 
   const [saved, setSaved] = useState<CardProps[]>([]);
 

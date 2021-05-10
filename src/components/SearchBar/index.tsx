@@ -13,7 +13,6 @@ interface Props {
 
 const SearchBar: React.FC<Props> = ({ onChange, isFetching }: Props) => {
   const [typedSearch, setTypedSearch] = useState('');
-  const [lastTypedSearch, setLastTypedSearch] = useState('');
   const [data, setData] = useState<CardProps>();
   const [greeting, setGreeting] = useState(true);
   let debounceTime: any;
@@ -88,7 +87,7 @@ const SearchBar: React.FC<Props> = ({ onChange, isFetching }: Props) => {
         />
         <AiOutlineSearch className="searchIcon" />
       </div>
-      {data && onChange(data, typedSearch) && isFetching(false)}
+      {data && onChange(data, typedSearch)}
     </Container>
   );
 };
