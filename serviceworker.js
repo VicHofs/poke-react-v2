@@ -24,6 +24,7 @@ self.addEventListener('install', event => {
 
 // Wait
 self.addEventListener('fetch', event => {
+  console.log(event.request);
   event.respondWith(
     caches.match(event.request).then(() => {
       return fetch(event.request).catch(() => caches.match('offline.html'));
