@@ -18,7 +18,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "/poke-react-v2",
+  "start_url": "/poke-react-v2/",
   "display": "standalone",
   "theme_color": "#CC0000",
   "background_color": "#ffffff"
