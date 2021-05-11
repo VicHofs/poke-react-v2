@@ -1,6 +1,7 @@
 {
   "short_name": "PokéReact",
   "name": "Poké React",
+  "description": "A Pokédex Web App created with React!",
   "icons": [
     {
       "src": "favicon.ico",
