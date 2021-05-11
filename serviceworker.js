@@ -1,5 +1,13 @@
 const CACHE_NAME = 'v1';
-const urlsToCache = ['index.html', 'offline.html', 'assets'];
+const urlsToCache = [
+  'index.html',
+  'offline.html',
+  'assets/fonts/pokemon_fire_red.otf',
+  'assets/images/heart.png',
+  'assets/images/logo.png',
+  'assets/images/noSignal.png',
+  'assets/images/pokeball.png',
+];
 
 const self = this;
 
