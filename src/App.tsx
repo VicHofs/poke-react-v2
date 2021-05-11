@@ -3,12 +3,12 @@ import Card, { CardProps } from 'components/Card';
 import Header from 'components/Header'; /*
 import CardDefaultProps from 'mock/card'; */
 import SearchBar from 'components/SearchBar';
-import spinner from 'static/images/loader.png';
+import spinner from 'assets/images/loader.png';
 import { ThemeProvider } from 'styled-components';
 import darkTheme from 'styles/themes/dark';
 import defaultTheme from 'styles/themes/default';
-import darkmodeIcon from 'static/images/darkmodeIcon.png';
-import defaultmodeIcon from 'static/images/defaultmodeIcon.png';
+import darkmodeIcon from 'assets/images/darkmodeIcon.png';
+import defaultmodeIcon from 'assets/images/defaultmodeIcon.png';
 import Footer from 'components/Footer';
 import { getCookies, setCookie } from 'helpers/cookies';
 import GlobalStyles from './styles/global';
