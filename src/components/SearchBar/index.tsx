@@ -23,6 +23,7 @@ const SearchBar: React.FC<Props> = ({ onChange, isFetching }: Props) => {
     'PikaPika?',
     'Looking for...',
     'Type your search here...',
+    'Pokémon name or No.',
     'I choose...',
   ];
 
