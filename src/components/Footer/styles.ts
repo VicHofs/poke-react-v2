@@ -36,7 +36,7 @@ export const Container = styled.div`
     content: '」';
     position: absolute;
     right: 0;
-    transform: translate(82%, 13px) scaleX(0.8);
+    transform: translate(70%, 13px) scaleX(0.8);
     visibility: hidden;
     transition: all 300ms cubic-bezier(0.16, 0.79, 0.58, 0.97);
     opacity: 0;
@@ -54,7 +54,7 @@ export const Container = styled.div`
 
   a:hover:after {
     visibility: visible;
-    transform: translate(82%, 3px) scale(0.8, 0.6);
+    transform: translate(70%, 3px) scale(0.8, 0.6);
     opacity: 1;
   }
 
