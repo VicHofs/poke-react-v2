@@ -25,6 +25,12 @@ self.addEventListener('install', event => {
 // Wait
 self.addEventListener('fetch', event => {
   console.log('requested ', event.request);
+  if (
+    event.request.destination === 'document' &&
+    /poke-react-v2\/$/.test(event.request.url) &&
+    navigator.onLine === false
+  )
+    event.respondWith(caches.match('offline.html'));
   event.respondWith(
     caches.match(event.request).then(() => {
       return fetch(event.request).catch(() => caches.match('offline.html'));
