@@ -16,7 +16,7 @@ export const Container = styled.div`
     max-height: 165vw;
 
     user-drag: none;
-    user-select-none;
+    user-select: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
     -webkit-user-select: none;
