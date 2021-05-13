@@ -44,7 +44,7 @@ const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.colors.text};
 
     input, textarea, select {
-      -webkit-appearance: none;
+      // -webkit-appearance: none;
     }
   }
 
