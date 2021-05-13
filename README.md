@@ -1,7 +1,7 @@
 # Poké React v2
 
 <div display="flex" align="center">
-	<img src="https://github.com/VicHofs/poke-react/blob/master/gh-assets/overview.gif" />
+	<img src="https://github.com/VicHofs/poke-react-v2/blob/main/gh_assets/overview_live.gif" />
 </div>
 <p align="center">
   <a href="https://www.linkedin.com/in/victor-hofstetter/">
@@ -71,7 +71,7 @@ This project was developed with the following technologies:
 ## 📋 Layout
 
 This is a SPA comprised of a header, search bar and pokémon cards resulting from searches.
-<img src="https://github.com/VicHofs/poke-react/blob/master/gh-assets/overview.png" />
+<img src="https://github.com/VicHofs/poke-react-v2/blob/main/gh-assets/overview.png" />
 
 ## 📜 License
 
