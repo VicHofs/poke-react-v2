@@ -71,7 +71,7 @@ This project was developed with the following technologies:
 ## 📋 Layout
 
 This is a SPA comprised of a header, search bar and pokémon cards resulting from searches.
-<img src="https://github.com/VicHofs/poke-react-v2/blob/main/gh-assets/overview.png" />
+<img src="https://github.com/VicHofs/poke-react-v2/blob/main/gh_assets/overview.png" />
 
 ## 📜 License
 
