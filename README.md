@@ -1,7 +1,7 @@
 # Poké React v2
 
 <div display="flex" align="center">
-	<img src="https://github.com/VicHofs/poke-react-v2/blob/main/gh_assets/overview_live.gif" />
+	<img src="https://github.com/VicHofs/poke-react-v2/blob/main/gh_assets/overview.gif" />
 </div>
 <p align="center">
   <a href="https://www.linkedin.com/in/victor-hofstetter/">
@@ -52,8 +52,17 @@ This project was developed with the following technologies:
 
 ## 📋 Layout
 
-This is a Single Page PWA comprised of a header, search bar and pokémon cards resulting from searches.
-<img src="https://github.com/VicHofs/poke-react-v2/blob/main/gh_assets/overview.png" />
+Pokémon cards resulting from searches include the Pokémon's main sprite and Pokédex ID No. on the left, and its name, type(s) and description in the center, with a dropdown menu for selecting the description version on the top right.
+<img src="https://github.com/VicHofs/poke-react-v2/blob/main/gh_assets/overview.png" height="350px"/>
+
+Hovering over type icons will show a pop-up with the respective type label.
+<img src="https://github.com/VicHofs/poke-react-v2/blob/main/gh_assets/types.gif" height="250px"/>
+
+Cards can be saved by clicking the _save button_ on the right, and saved cards can be removed by clicking the _remove button_.
+<img src="https://github.com/VicHofs/poke-react-v2/blob/main/gh_assets/saving.gif" height="350px" />
+
+Dark mode can be toggled on or off by clicking the theme button.
+<img src="https://github.com/VicHofs/poke-react-v2/blob/main/gh_assets/theme.gif" height="350px" />
 
 ## 📜 License
 
