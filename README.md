@@ -70,7 +70,7 @@ Dark mode can be toggled on or off by clicking the theme button.<br>
 
 ## 📜 License
 
-This project is under the MIT license. See the [LICENSE](https://github.com/VicHofs/poke-react-v2/LICENSE) for details.
+This project is under the MIT license. See the [LICENSE](https://github.com/VicHofs/poke-react-v2/blob/main/LICENSE) for details.
 
 Made with ❤ by Victor B. Hofstetter and Hugo Almeida at Hicom IT Brazil.
 
