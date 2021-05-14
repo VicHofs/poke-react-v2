@@ -8,7 +8,7 @@
     <img alt="Made by VicHofs and hv90" src="https://img.shields.io/badge/made%20by-VicHofs | hv90-%2304D361">
   </a>
 
-  <a href="https://github.com/VicHofs/poke-react/commits/master">
+  <a href="https://github.com/VicHofs/poke-react-v2/commits/main">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/VicHofs/poke-react-v2">
   </a>
 
@@ -16,28 +16,9 @@
 </p>
 <p align="center">
 
-## Why SSR (Server Side Rendering)?
+## Why PWAs (Progressive Web Apps)?
 
-All data will be pre-rendered by the server side before the client receives it,
-which improves the application's performance and the user experience.
-You can see how this works by yourself by disabling JavaScript in your browser settings.
-You'll still get the pre-rendered HTML and CSS files, but the application won't be interactive, since it needs live JavaScript for that purpose.
-
-## :whale: Getting started with Poké React SSR on Docker
-
-First, clone the project
-
-```bash
-git clone https://github.com/hv90/poke-react.git && cd poke-react
-```
-
-Then run `docker-compose`
-
-```bash
-docker-compose up
-```
-
-Open [http://localhost:3000](http://localhost:3000) with a browser to see the result.
+_Progressive Web Apps_ offer all the capabilities of a standard web app all the while providing a native-like experience by means of local installation, offline-first user experience, and mobile responsiveness.
 
 ## 📝 Project
 
@@ -49,19 +30,20 @@ A PokéDex-like React app
 
 _All data is pulled from the PokéApi API._
 
-Use the search bar to look up a Pokémon—as of right now, searches need to match the Pokémon's name perfectly—and get its sprite, PokéDex ID, type(s) and description.
+Use the search bar to look up a Pokémon—through its name or Pokédex ID No.—and get its sprite, PokéDex ID, type(s) and description.
 
-There is support for multiple languages—spanning across different games—pertaining to descriptions.
+There is support for multiple languages—spanning across different games—in Pokémon descriptions.
 
-Dark mode toggles automatically depending on the user's system preferences.
+Dark mode toggles automatically depending on the user's system preferences, but can be manually set to a preferred state that will persist.
 
 ## 🗃 Technologies
 
 This project was developed with the following technologies:
 
-- [JavaScript][javascript]
+- [TypeScript][typescript]
 - [ReactJS][reactjs]
-- [Insomnia][insomnia]
+- [Prettier][prettier]
+- [Visual Studio Code][vs]
 - [PokéApi][pokeapi]
 - [Docker][docker]
 - [ExpressJS][express]
@@ -70,16 +52,16 @@ This project was developed with the following technologies:
 
 ## 📋 Layout
 
-This is a SPA comprised of a header, search bar and pokémon cards resulting from searches.
+This is a Single Page PWA comprised of a header, search bar and pokémon cards resulting from searches.
 <img src="https://github.com/VicHofs/poke-react-v2/blob/main/gh_assets/overview.png" />
 
 ## 📜 License
 
-This project is under the MIT license. See the [LICENSE](https://github.com/VicHofs/poke-react/LICENSE) for details.
+This project is under the MIT license. See the [LICENSE](https://github.com/VicHofs/poke-react-v2/LICENSE) for details.
 
-Made with ❤ by Victor Hofstetter and Hugo Almeida at Hicom IT Brazil.
+Made with ❤ by Victor B. Hofstetter and Hugo Almeida at Hicom IT Brazil.
 
-[javascript]: https://www.typescriptlang.org/
+[typescript]: https://www.typescriptlang.org/
 [reactjs]: https://reactjs.org
 [yarn]: https://yarnpkg.com/
 [vs]: https://code.visualstudio.com/
