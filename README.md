@@ -59,13 +59,13 @@ Pokémon cards resulting from searches include the Pokémon's main sprite, Poké
 <img src="https://github.com/VicHofs/poke-react-v2/blob/main/gh_assets/app.png" width="600px"/>
 
 ### Components
-Hovering over type icons will show a pop-up with the respective type label.
+Hovering over type icons will show a pop-up with the respective type label.<br>
 <img src="https://github.com/VicHofs/poke-react-v2/blob/main/gh_assets/types.gif" height="250px"/>
 
-Cards can be saved by clicking the _save button_ on the right, and saved cards can be removed by clicking the _remove button_.
+Cards can be saved by clicking the _save button_ on the right, and saved cards can be removed by clicking the _remove button_.<br>
 <img src="https://github.com/VicHofs/poke-react-v2/blob/main/gh_assets/saving.gif" height="350px" />
 
-Dark mode can be toggled on or off by clicking the theme button.
+Dark mode can be toggled on or off by clicking the theme button.<br>
 <img src="https://github.com/VicHofs/poke-react-v2/blob/main/gh_assets/theme.gif" height="350px" />
 
 ## 📜 License
