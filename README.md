@@ -55,8 +55,8 @@ This project was developed with the following technologies:
 ### Desktop & mobile
 The app's layout is responsive and made for desktop, tablet, and mobile.
 Pokémon cards resulting from searches include the Pokémon's main sprite, Pokédex ID No., name, type(s) and description, and a dropdown menu for selecting the description version.
-<img src="https://github.com/VicHofs/poke-react-v2/blob/main/gh_assets/overview.png" height="350px"/>
-<img src="https://github.com/VicHofs/poke-react-v2/blob/main/gh_assets/app.png" height="350px"/>
+<img src="https://github.com/VicHofs/poke-react-v2/blob/main/gh_assets/overview.png" width="600px"/>
+<img src="https://github.com/VicHofs/poke-react-v2/blob/main/gh_assets/app.png" width="600px"/>
 
 ### Components
 Hovering over type icons will show a pop-up with the respective type label.
